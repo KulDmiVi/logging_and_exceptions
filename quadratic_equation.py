@@ -1,3 +1,4 @@
+import logging
 import math
 
 
@@ -31,7 +32,7 @@ def calc_roots_equation(a, b, discr):
         return 'Уравнение не имеет действительных корней'
 
 
-if __name__ == '__main__':
+def main():
     print("Введите коэффициенты для уравнения")
     print("ax^2 + bx + c = 0:")
     coefficients = input_data()
@@ -39,6 +40,16 @@ if __name__ == '__main__':
         koef1, koef2, koef3 = coefficients
         discriminant = get_discr(koef1, koef2, koef3)
         result = calc_roots_equation(koef1, koef2, discriminant)
+        return result
+    else:
+        return None
+
+
+if __name__ == '__main__':
+    result = None
+    while not result:
+        result = main()
         print(result)
+
 
 
