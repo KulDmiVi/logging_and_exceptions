@@ -4,7 +4,7 @@ _log_format = f"%(asctime)s - [%(levelname)s] - %(filename)s. %(funcName)s() lin
 
 
 def get_file_handler(log_name):
-    file_handler = logging.FileHandler(log_name)
+    file_handler = logging.FileHandler(filename=log_name, encoding="utf-8")
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(logging.Formatter(_log_format))
     return file_handler
