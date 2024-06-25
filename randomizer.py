@@ -2,7 +2,7 @@ from random import randint
 
 import logger
 
-logger = logger.get_logger(__name__, 'randomize.log')
+logger = logger.get_logger(__name__, 'randomizer.log')
 
 
 def get_input():
